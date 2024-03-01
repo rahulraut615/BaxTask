@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "firstname": "Rahul",
+      "lastname": "Raut",
+      "email": "rahul@gmail.com",
+      "address": "VidyaNagar Beed",
+      "mobilenumber": "1234567899",
+      "id": "69e9"
+    },
+    {
+      "firstname": "Vaibhav",
+      "lastname": "Pawar",
+      "email": "vaibhav@gmail.com",
+      "address": "Pune",
+      "mobilenumber": "9922668890",
+      "id": "18a3"
+    },
+    {
+      "firstname": "Naresh",
+      "lastname": "Shitole",
+      "email": "naresh@gmail.com",
+      "address": "pune",
+      "mobilenumber": "1122847739",
+      "id": "d8a6"
+    },
+    {
+      "id": "12a0",
+      "firstname": "Ankit",
+      "lastname": "Malviya",
+      "email": "ankit@gmail.com",
+      "address": "Kanpur",
+      "mobilenumber": "5629935493"
+    },
+    {
+      "firstname": "Sachin",
+      "lastname": "Yadav",
+      "email": "sachin@jadhav.com",
+      "address": "Karnatak",
+      "mobilenumber": "3775298357",
+      "id": "0fd6"
+    },
+    {
+      "id": "06fb",
+      "firstname": "Vivek",
+      "lastname": "Kadam",
+      "email": "Vivek@gmail.com",
+      "address": "Pune",
+      "mobilenumber": "9978634628"
+    }
+  ]
+}

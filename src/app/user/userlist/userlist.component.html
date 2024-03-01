@@ -1,0 +1,22 @@
+<table class="table table-bordered border-primary text-center ">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.firstname }}  {{user.lastname }}</td>
+        <td>{{user.email }}</td>
+        <td>{{user.mobilenumber }}</td>    
+        <td class="d-flex justify-content-evenly">
+          <button class="btn btn-info btn-sm " [routerLink]="['/userupsert',user.id]">Edit</button>
+          <button class="btn btn-danger btn-sm " (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

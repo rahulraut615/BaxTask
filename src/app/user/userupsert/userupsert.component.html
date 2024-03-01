@@ -1,7 +1,7 @@
-<div class="container d-flex justify-content-center">
-  <div class="col-md-5 shadow">
+<div class="container d-flex justify-content-center mt-4">
+  <div class="col-md-6 shadow">
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="needs-validation" >
-        <div class="mb-3">
+        <div class="mb-3 ms-3 me-3 mt-3">
           <input type="text" id="firstname" formControlName="firstname" class="form-control" placeholder="First Name" required>
          <small *ngIf="userForm.controls['firstname'].touched">
             <span *ngIf="userForm.controls['firstname'].errors?.['required']" class="text-danger">First Name is Required</span>
@@ -9,14 +9,14 @@
          </small>
            
         </div>
-        <div class="mb-3">
+        <div class="mb-3 ms-3 me-3 mt-3">
           <input type="text" id="lastname" formControlName="lastname" class="form-control" placeholder="Last Name" required>
           <small *ngIf="userForm.controls['lastname'].touched">
             <span *ngIf="userForm.controls['lastname'].errors?.['required']" class="text-danger">Last Name is Required</span>
             <span *ngIf="userForm.controls['lastname'].errors?.['pattern']" class="text-danger">Only Name</span>
          </small>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 ms-3 me-3 mt-3">
           <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email" required>
           <small *ngIf="userForm.controls['email'].touched">
             <span *ngIf="userForm.controls['email'].errors?.['required']" class="text-danger">Email is Required</span>
@@ -25,21 +25,23 @@
      
           
     </div>
-        <div class="mb-3">
+        <div class="mb-3 ms-3 me-3 mt-3">
           <input type="text" id="address" formControlName="address" class="form-control" placeholder="Address">
           <small *ngIf="userForm.controls['address'].touched">
             <span *ngIf="userForm.controls['address'].errors?.['required']" class="text-danger">Enter Address</span>
             
          </small>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 ms-3 me-3 mt-3">
           <input type="text" id="mobilenumber" formControlName="mobilenumber" class="form-control" placeholder="Mobile Number" required>
           <small *ngIf="userForm.controls['mobilenumber'].touched">
             <span *ngIf="userForm.controls['mobilenumber'].errors?.['required']" class="text-danger">Mobile No is Required</span>
             <span *ngIf="userForm.controls['mobilenumber'].errors?.['pattern']" class="text-danger">Enter Valid Mobile No</span>
          </small>
         </div>
-        <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Submit</button>
+        <button type="submit" *ngIf="isHidden" class="btn btn-primary mb-3 ms-3 me-3 mt-3" [disabled]="userForm.invalid">Submit</button>
+        <button type="button" (click)="onUpdate()" *ngIf="!isHidden" class="btn btn-primary mb-3 ms-3 me-3 mt-3" [disabled]="userForm.invalid">Update</button>
+
       </form>
   </div>
 </div>
